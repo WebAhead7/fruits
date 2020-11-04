@@ -1,0 +1,23 @@
+{
+  "name": "fly-webahead",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebAhead7/fly-webahead.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WebAhead7/fly-webahead/issues"
+  },
+  "homepage": "https://github.com/WebAhead7/fly-webahead#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}

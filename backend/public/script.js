@@ -6,7 +6,7 @@ const online = `https://fly-webahead.herokuapp.com/getdata?name=`;
 const proxyurl = "https://cors-anywhere.herokuapp.com/";
 
 function getData(searched) {
-  fetch(`${proxyurl}${online}${searched}`)
+  fetch(`${online}${searched}`)
     .then((res) => res.json())
     .then((res) => {
       renderList(res);

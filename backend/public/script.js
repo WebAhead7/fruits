@@ -1,15 +1,19 @@
 const search = document.querySelector("#search");
 const list = document.querySelector("#auto-complete");
+
 const local = `http://localhost:3000/getdata?name=`;
 const online = `https://fly-webahead.herokuapp.com/getdata?name=`;
-
 const proxyurl = "https://cors-anywhere.herokuapp.com/";
+const mapLink = `http://www.google.com/maps/place/`;
+
+let globalData;
 
 function getData(searched) {
-  fetch(`${online}${searched}`)
+  fetch(`${local}${searched}`)
     .then((res) => res.json())
     .then((res) => {
       renderList(res);
+      globalData = res[0];
     })
     .catch((err) => {
       console.log(err);
@@ -37,4 +41,8 @@ search.addEventListener("input", (e) => {
 
   searched.length >= 3 && getData(searched);
   search.value == "" ? (list.innerHTML = "") : null;
+});
+
+searchBtn.addEventListener("click", (e) => {
+  info.innerHTML = generateElement(globalData);
 });

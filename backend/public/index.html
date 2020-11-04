@@ -10,15 +10,21 @@
     <div class="container">
       <h1>Webahead flights</h1>
       <h3>Search Airports</h3>
-      <input
-        type="text"
-        list="auto-complete"
-        name="search"
-        id="search"
-        placeholder="search airports"
-      />
+      <div class="input-holder">
+        <input
+          type="text"
+          list="auto-complete"
+          name="search"
+          id="search"
+          class="search"
+          placeholder="search airports"
+        />
+        <button id="search-btn">Search</button>
+      </div>
       <datalist id="auto-complete" class="the-datalist"></datalist>
+      <div class="airport"></div>
     </div>
+    <script src="/public/elements.js"></script>
     <script src="/public/script.js"></script>
   </body>
 </html>

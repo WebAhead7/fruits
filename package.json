@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon backend/server.js"
+    "start": "nodemon backend/server.js",
+    "greeting": "cowsay Alaa is fat"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,10 @@
   },
   "homepage": "https://github.com/WebAhead7/fly-webahead#readme",
   "devDependencies": {
-    "nodemon": "^2.0.6"
-  }
+    "cowsay": "^1.4.0",
+    "nodemon": "^2.0.6",
+    "supertest": "^6.0.0",
+    "tape": "^5.0.1"
+  },
+  "dependencies": {}
 }

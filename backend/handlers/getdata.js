@@ -1,4 +1,5 @@
 const data = require("../data/airports.json");
+const notFound = require("../data/notfound.json");
 
 function dataHandler(request, response) {
   const search = new URLSearchParams(request.url.split("?")[1]);
@@ -17,6 +18,9 @@ function autoComplete(search) {
       item["name"].toLowerCase().includes(search)
     );
   });
+
+  if (newArr.length == 0) return notFound;
+
   return newArr;
 }
 

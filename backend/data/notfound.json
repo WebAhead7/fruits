@@ -1,0 +1,22 @@
+[
+    {
+        "code": "AAA",
+        "lat": "-17.3595",
+        "lon": "-145.494",
+        "name": "Not found",
+        "city": "Not found",
+        "state": "Tuamotu-Gambier",
+        "country": "Not found",
+        "woeid": "12512819",
+        "tz": "Not found",
+        "phone": "",
+        "type": "Airports",
+        "email": "",
+        "url": "",
+        "runway_length": "4921",
+        "elev": "7",
+        "icao": "NTGA",
+        "direct_flights": "2",
+        "carriers": "1"
+      }
+  ]

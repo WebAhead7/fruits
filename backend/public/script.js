@@ -1,8 +1,9 @@
 const search = document.querySelector("#search");
 const list = document.querySelector("#auto-complete");
+const link = `http://localhost:3000/getdata?name=`;
 
 function getData(searched) {
-  fetch(`http://localhost:3000/getdata?name=${searched}`)
+  fetch(`${link}${searched}`)
     .then((res) => res.json())
     .then((res) => {
       renderList(res);
@@ -13,6 +14,7 @@ function getData(searched) {
 }
 
 function renderList(arr) {
+  console.log(arr);
   list.innerHTML = "";
   arr.forEach((curr) => {
     const option = document.createElement("option");

@@ -3,7 +3,7 @@
 }
 
 body {
-  /* height: 100vmax; */
+  height: 100%;
   width: 100%;
   background-image: url("./airport.jpg");
   background-repeat: no-repeat;

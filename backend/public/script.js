@@ -1,9 +1,10 @@
 const search = document.querySelector("#search");
 const list = document.querySelector("#auto-complete");
 const link = `http://localhost:3000/getdata?name=`;
+const proxyurl = "https://cors-anywhere.herokuapp.com/";
 
 function getData(searched) {
-  fetch(`${link}${searched}`)
+  fetch(`${proxyurl}${link}${searched}`)
     .then((res) => res.json())
     .then((res) => {
       renderList(res);

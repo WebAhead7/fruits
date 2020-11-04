@@ -16,11 +16,15 @@ function getData(searched) {
 function renderList(arr) {
   console.log(arr);
   list.innerHTML = "";
-
   arr.forEach((curr) => {
     const option = document.createElement("option");
     option.innerText = `${curr["city"]}, ${curr["country"]}`;
     option.value = curr["name"];
+    if (curr["name"] == "cannotfind") {
+      option.innerText = `${search.value}`;
+      option.value = `${search.value}`;
+      list.appendChild(option);
+    }
     list.appendChild(option);
   });
 }

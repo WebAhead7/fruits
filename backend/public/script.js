@@ -9,7 +9,7 @@ const mapLink = `http://www.google.com/maps/place/`;
 let globalData;
 
 function getData(searched) {
-  fetch(`${local}${searched}`)
+  fetch(`${online}${searched}`)
     .then((res) => res.json())
     .then((res) => {
       renderList(res);
@@ -21,7 +21,6 @@ function getData(searched) {
 }
 
 function renderList(arr) {
-  console.log(arr);
   list.innerHTML = "";
   arr.forEach((curr) => {
     const option = document.createElement("option");

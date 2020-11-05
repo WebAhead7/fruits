@@ -1,5 +1,6 @@
 const search = document.querySelector("#search");
 const list = document.querySelector("#auto-complete");
+const datalisto = document.querySelector(".datalisto");
 
 const local = `http://localhost:3000/getdata?name=`;
 const online = `https://fly-webahead.herokuapp.com/getdata?name=`;
@@ -9,7 +10,7 @@ const mapLink = `http://www.google.com/maps/place/`;
 let globalData;
 
 function getData(searched) {
-  fetch(`${online}${searched}`)
+  fetch(`${local}${searched}`)
     .then((res) => res.json())
     .then((res) => {
       renderList(res);
@@ -25,13 +26,14 @@ function renderList(arr) {
   arr.forEach((curr) => {
     const option = document.createElement("option");
     option.innerText = `${curr["city"]}, ${curr["country"]}`;
-    option.value = curr["name"];
-    if (curr["name"] == "cannotfind") {
-      option.innerText = `${search.value}`;
+    if (curr["name"] == "not found") {
+      option.innerText = curr["name"];
       option.value = `${search.value}`;
       list.appendChild(option);
+    } else {
+      option.value = curr["name"];
+      list.appendChild(option);
     }
-    list.appendChild(option);
   });
 }
 

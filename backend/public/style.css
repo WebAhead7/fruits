@@ -9,6 +9,7 @@ body {
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
+  overflow-x: hidden;
 }
 
 .container {
@@ -25,6 +26,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 20px;
 }
 
 .search {
@@ -37,6 +39,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0 20px;
+  border-radius: 7px;
 }
 
 .airport-info {
@@ -52,7 +57,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .maps {
@@ -60,6 +65,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 20px;
 }
 
 h1,
@@ -67,5 +73,5 @@ h2,
 h3,
 h4,
 span {
-  color: #000;
+  color: #fff;
 }

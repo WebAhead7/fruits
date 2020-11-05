@@ -13,7 +13,7 @@ You need to enter at least 3 letters in the search bar, and you will see a list 
 
 # Photos
 
-<img src="./src/airport.jpg">
+<img src="./backend/public/img/airports.jpg">
 
 # Built with:
 

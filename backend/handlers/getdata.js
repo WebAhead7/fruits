@@ -14,14 +14,13 @@ function autoComplete(search) {
     return (
       item["city"].toLowerCase().includes(search) ||
       item["country"].toLowerCase().includes(search) ||
-      item["tz"].toLowerCase().includes(search) ||
       item["name"].toLowerCase().includes(search)
     );
   });
 
   if (newArr.length == 0) return notFound;
 
-  return newArr;
+  return newArr.slice(0, 10);
 }
 
 module.exports = dataHandler;

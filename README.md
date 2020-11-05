@@ -21,8 +21,7 @@ html, css, js, NodeJS, heroku server.
 
 # Contact
 
-<br>
 Alaa: [@GitHub](https://github.com/alaabashiyi) <br>
 shooq: [@GitHub](https://github.com/shoogkabiya) <br>
-Um-Kalthoum: [@GitHub](https://github.com/OmklthomAmara) <br>
 MuhKham: [@GitHub](https://github.com/muhkham) <br>
+Um-Kalthoum: [@GitHub](https://github.com/OmklthomAmara) <br>

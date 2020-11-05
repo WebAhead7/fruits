@@ -63,3 +63,75 @@ test(" testing missing airport", (t) => {
       t.end();
     });
 });
+
+// test 4
+const expected = {
+  code: "VDA",
+  lat: "29.9528",
+  lon: "34.9583",
+  name: "Ovda Airport",
+  city: "Ovda",
+  state: "HaDarom",
+  country: "Israel",
+  woeid: "12513788",
+  tz: "Asia/Jerusalem",
+  phone: "",
+  type: "Airports",
+  email: "",
+  url: "",
+  runway_length: "9843",
+  elev: "1490",
+  icao: "LLOV",
+  direct_flights: "1",
+  carriers: "1",
+};
+
+test("compare obj", (t) => {
+  supertest(router)
+    .get("/getdata?name=israel")
+    .expect(200)
+    .expect("content-type", "application/json")
+    .end((err, res) => {
+      t.error(err);
+      t.deepEqual(res.body[4], expected);
+      t.end();
+    });
+});
+// test 5
+test("compare length", (t) => {
+  supertest(router)
+    .get("/getdata?name=new")
+    .expect(200)
+    .expect("content-type", "application/json")
+    .end((err, res) => {
+      t.error(err);
+      t.equal(res.body.length, 285);
+      t.end();
+    });
+});
+//test 6
+test("compare obj key", (t) => {
+  supertest(router)
+    .get("/getdata?name=noo")
+    .expect(200)
+    .expect("content-type", "application/json")
+    .end((err, res) => {
+      t.error(err);
+      t.equal(res.body[2].country, "United States");
+      t.end();
+    });
+});
+// test 7
+
+test("home page", (t) => {
+  supertest(router)
+    .get("/jf")
+    .expect(404)
+    .expect("content-type", "text/html")
+    .end((err, res) => {
+      t.error(err);
+      console.log(res);
+      t.equal(res.text, "<h1>Not found</h1>");
+      t.end();
+    });
+});

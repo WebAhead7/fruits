@@ -1,6 +1,8 @@
 const searchBtn = document.querySelector("#search-btn");
 const info = document.querySelector(".airport");
 
+// const KEYY = process.env.API_KEY;
+
 function generateElement(airport) {
   info.innerHTML = "";
   let newDom = `<div class="airport-info"><h1>${airport.name}</h1><div class="more-info">

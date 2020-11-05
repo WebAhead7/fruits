@@ -44,5 +44,6 @@ search.addEventListener("input", (e) => {
 });
 
 searchBtn.addEventListener("click", (e) => {
+  // console.log(globalData);
   info.innerHTML = generateElement(globalData);
 });

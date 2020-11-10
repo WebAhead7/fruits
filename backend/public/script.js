@@ -47,7 +47,7 @@ searchBtn.addEventListener("click", (e) => {
   fetch(`${local}/fruitdata?name=${search.value}`)
     .then((res) => res.json())
     .then((res) => {
-      renderList(res);
+      // renderList(res);
     })
     .catch((err) => {});
 });

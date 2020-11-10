@@ -1,6 +1,6 @@
 ("use strict");
 const http = require("http");
-const url = "";
+const url = "http://fruits.dev/api/fruits";
 
 const myRequest = (url) => {
   const promise = new Promise((resolve, reject) => {

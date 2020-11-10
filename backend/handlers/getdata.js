@@ -1,4 +1,5 @@
-const data = require("../data/airports.json");
+const data = require("../data/fruits.json");
+
 const notFound = require("../data/notfound.json");
 
 function dataHandler(request, response) {
@@ -10,12 +11,8 @@ function dataHandler(request, response) {
 }
 
 function autoComplete(search) {
-  let newArr = data.filter((item) => {
-    return (
-      item["city"].toLowerCase().includes(search) ||
-      item["country"].toLowerCase().includes(search) ||
-      item["name"].toLowerCase().includes(search)
-    );
+  let newArr = data.fruits.filter((item) => {
+    return item.toLowerCase().includes(search);
   });
 
   if (newArr.length == 0) return notFound;

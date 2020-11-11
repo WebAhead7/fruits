@@ -1,6 +1,5 @@
 ("use strict");
 const http = require("https");
-const url = "http://fruits.dev/api/fruits";
 
 const myRequest = (url) => {
   return new Promise((resolve, reject) => {

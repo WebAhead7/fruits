@@ -4,7 +4,7 @@ const datalisto = document.querySelector(".datalisto");
 
 const local = `http://localhost:3000`;
 // const online = `https://fly-webahead.herokuapp.com/getdata?name=`;
-// const proxyurl = "https://cors-anywhere.herokuapp.com/";
+const proxyurl = "https://cors-anywhere.herokuapp.com/";
 // const mapLink = `http://www.google.com/maps/place/`;
 // let globalData;
 function getData(searched) {

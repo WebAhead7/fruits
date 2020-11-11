@@ -3,7 +3,7 @@
 Webahead fruits data site
 visit the site: <h2><a href="https://fly-webahead.herokuapp.com/">fruits</h2>
 
-<img src="https://images.globes.co.il/images/NewGlobes/big_image_800/2018/43A0B7EF0AD69EBFF0A66952252C45A5_800x392.20181113T171136.jpg">
+<img src="https://previews.123rf.com/images/romastudio/romastudio1603/romastudio160300038/52915731-organic-fruits-background-studio-photography-of-different-fruits-on-old-wooden-table-high-resolution.jpg">
 
 # Instructions & Info
 

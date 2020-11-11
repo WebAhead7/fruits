@@ -1,5 +1,5 @@
 {
-  "name": "fly-webahead",
+  "name": "fruits",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WebAhead7/fly-webahead.git"
+    "url": "git+https://github.com/WebAhead7/fruits.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/WebAhead7/fly-webahead/issues"
+    "url": "https://github.com/WebAhead7/fruits/issues"
   },
-  "homepage": "https://github.com/WebAhead7/fly-webahead#readme",
+  "homepage": "https://github.com/WebAhead7/fruits#readme",
   "devDependencies": {
     "nodemon": "^2.0.6",
     "supertest": "^6.0.0",

@@ -40,9 +40,8 @@ h3 {
 #giphyContainer {
   margin-bottom: 40px;
   transform: translateX(-40%);
-  align-items: center;
-  margin-top: 80px;
+  margin-top: 40px;
   margin: auto;
-  width: 40%;
-  min-height: 40%;
+  width: 30%;
+  height: 40%;
 }

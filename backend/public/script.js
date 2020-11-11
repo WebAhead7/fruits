@@ -44,10 +44,22 @@ search.addEventListener("input", (e) => {
 });
 
 searchBtn.addEventListener("click", (e) => {
+  // console.log("hereeeee");
   fetch(`${local}/fruitdata?name=${search.value}`)
     .then((res) => res.json())
     .then((res) => {
-      console.log(res);
+      generateImage(res);
     })
-    .catch((err) => {});
+
+    .catch((err) => {
+      console.log("Error", err);
+    });
 });
+
+function generateImage(img) {
+  const giphyContainer = document.querySelector("#giphyContainer");
+  giphyContainer.innerHTML = "";
+  const giphy = document.createElement("img");
+  giphy.setAttribute("src", img);
+  giphyContainer.appendChild(giphy);
+}

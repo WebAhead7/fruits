@@ -1,9 +1,9 @@
 ("use strict");
-const http = require("http");
+const http = require("https");
 const url = "http://fruits.dev/api/fruits";
 
 const myRequest = (url) => {
-  const promise = new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     http.get(url, (res) => {
       const { statusCode } = res;
       let error;
@@ -30,7 +30,6 @@ const myRequest = (url) => {
         });
     });
   });
-  return promise;
 };
 
 module.exports = myRequest;

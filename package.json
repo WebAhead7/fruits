@@ -24,7 +24,6 @@
     "tape": "^5.0.1"
   },
   "dependencies": {
- 
     "dotenv": "^8.2.0",
     "tape-promise": "^4.0.0"
   }

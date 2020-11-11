@@ -3,7 +3,9 @@ const api = require("../apiRequest");
 
 function fruitData(request, response) {
   const search = new URLSearchParams(request.url.split("?")[1]);
-  const searchedItem = search.get("name");
+  // const searchedItem = search.get("name");
+  const searchedItem = "apple";
+
   console.log(searchedItem);
   const url = `https://api.giphy.com/v1/gifs/search?api_key=${process.env.API_KEY}&q=${searchedItem}&limit=5&offset=0&rating=g&lang=en`;
   console.log(process.env.API_KEY);

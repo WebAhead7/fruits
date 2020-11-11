@@ -3,12 +3,14 @@ const list = document.querySelector("#auto-complete");
 const datalisto = document.querySelector(".datalisto");
 
 const local = `http://localhost:3000`;
-// const online = `https://fly-webahead.herokuapp.com/getdata?name=`;
-const proxyurl = "https://cors-anywhere.herokuapp.com/";
+const online = `https://cors-anywhere.herokuapp.com/https://fruitsdata.herokuapp.com`;
+
+const API_URL = online;
+
 // const mapLink = `http://www.google.com/maps/place/`;
 // let globalData;
 function getData(searched) {
-  fetch(`${local}/getdata?name=${searched}`)
+  fetch(`${API_URL}/getdata?name=${searched}`)
     .then((res) => res.json())
     .then((res) => {
       renderList(res);
@@ -45,7 +47,7 @@ search.addEventListener("input", (e) => {
 
 searchBtn.addEventListener("click", (e) => {
   // console.log("hereeeee");
-  fetch(`${local}/fruitdata?name=${search.value}`)
+  fetch(`${API_URL}/fruitdata?name=${search.value}`)
     .then((res) => res.json())
     .then((res) => {
       generateImage(res);

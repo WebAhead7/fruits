@@ -7,7 +7,7 @@ const datalist = document.querySelector(".the-datalist");
 const local = `http://localhost:3000`;
 const online = `https://fruitsdata.herokuapp.com`;
 
-const API_URL = local;
+const API_URL = online;
 
 function getData(searched) {
   fetch(`${API_URL}/getdata?name=${searched}`)

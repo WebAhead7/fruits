@@ -14,6 +14,9 @@ function fruitData(request, response) {
     })
     .catch((err) => {
       console.log(err);
+      // response.writeHead(404, { "content-type": "test/plain" });
+      response.end(err.message);
+      // response.end("not found");
     });
 }
 

@@ -39,8 +39,16 @@ function renderList(arr) {
 search.addEventListener("input", (e) => {
   const searched = e.target.value;
 
-  searched.length >= 0 && getData(searched);
+  if (searched.length >= 0) {
+    getData(searched);
+  }
+
   search.value == "" ? (list.innerHTML = "") : null;
+  if (search.value === "") {
+    innerHTML = "";
+  } else {
+    return null;
+  }
 });
 
 searchBtn.addEventListener("click", (e) => {

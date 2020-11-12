@@ -13,7 +13,7 @@ fruits images;
 
 # Built with:
 
-html, css, js, NodeJS
+html, css, js, NodeJS,heroku server.
 
 # Contact
 

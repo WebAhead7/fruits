@@ -3,7 +3,7 @@ const list = document.querySelector("#auto-complete");
 const datalisto = document.querySelector(".datalisto");
 
 const local = `http://localhost:3000`;
-const online = `https://cors-anywhere.herokuapp.com/https://fruitsdata.herokuapp.com`;
+const online = `https://fruitsdata.herokuapp.com`;
 
 const API_URL = online;
 

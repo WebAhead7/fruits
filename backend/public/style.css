@@ -38,9 +38,9 @@ h3 {
 }
 
 #giphyContainer {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   transform: translateX(-25%);
-  margin-top: 20px;
+  margin-top: 10px;
   margin: auto;
   justify-content: flex-start;
   width: 30%;

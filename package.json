@@ -2,7 +2,7 @@
   "name": "fruits",
   "version": "1.0.0",
   "description": "",
-  "main": "script.js",
+  "main": "server.js",
   "scripts": {
     "test": "node backend/tests/alltests.js",
     "start": "node backend/server.js",

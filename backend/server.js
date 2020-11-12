@@ -2,7 +2,6 @@ const http = require("http");
 const router = require("./router");
 require("dotenv").config();
 
-const KEYY = process.env.API_KEY;
 const PORT = process.env.PORT || 3000;
 const server = http.createServer(router);
 

@@ -1,20 +1,19 @@
 const search = document.querySelector("#search");
+const searchBtn = document.querySelector("#search-btn");
+const info = document.querySelector(".fruits");
 const list = document.querySelector("#auto-complete");
-const datalisto = document.querySelector(".datalisto");
+const datalist = document.querySelector(".the-datalist");
 
 const local = `http://localhost:3000`;
 const online = `https://fruitsdata.herokuapp.com`;
 
-const API_URL = online;
+const API_URL = local;
 
-// const mapLink = `http://www.google.com/maps/place/`;
-// let globalData;
 function getData(searched) {
   fetch(`${API_URL}/getdata?name=${searched}`)
     .then((res) => res.json())
     .then((res) => {
       renderList(res);
-      globalData = res;
     })
     .catch((err) => {
       console.log(err);
@@ -22,7 +21,6 @@ function getData(searched) {
 }
 
 function renderList(arr) {
-  console.log(arr);
   list.innerHTML = "";
   arr.forEach((curr) => {
     const option = document.createElement("option");
@@ -46,7 +44,6 @@ search.addEventListener("input", (e) => {
 });
 
 searchBtn.addEventListener("click", (e) => {
-  // console.log("hereeeee");
   fetch(`${API_URL}/fruitdata?name=${search.value}`)
     .then((res) => res.json())
     .then((res) => {
